@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style3.css"media="all">
+	<title>seirei</title>
+</head>
+<style>
+	.tategaki {
+		-webkit-writing-mode: vertical-rl;
+  		-moz-writing-mode: vertical-rl;
+  		-ms-writing-mode: tb-rl;
+  		-ms-writing-mode: vertical-rl;
+	    text-orientation: upright;
+  		writing-mode: vertical-rl;
+  		display: inline-block;
+		text-combine-upright: digits 2;
+	}
+</style>
+<section id="ヘッダー">
+ <h1>
+	蜻蛉打ち込み用Web
+ </h1>
+ <a>不具合等の連絡→<p><a href="mailto:seireicommittee@gmail.com">seireicommittee@gmail.com</a></p></a>
+ 
+ <ul id="jamp">
+	<p id="jampp"><strong>レイアウト選択</strong></p>
+	<li><a href="HR1.html">HR紹介Ⅰ</a></li>
+	<li><a href="HR2.html">HR紹介Ⅱ</a></li>
+	<li><a  href="gyouzi.html">行事用</a></li>
+	<li><a href="bukatsu.html">委員会,部活用</a></li>
+	<li><a href="free.html">自由レイアウト</a></li>
+ </ul>
+</section>
+<body>
+	
+	<div style="background:rgb(248, 248, 248); 
+	            width: 526px; 
+				height: 743px;
+				border:1px solid #000000;
+				margin:auto 25%;
+				margin-bottom: 6%;" 
+			id="template"
+	    >
+		<div id="title">
+	     <img src="Seivei.png"
+		 id="main1" 
+	     width="62px"
+	     height="192px" >
+		 <div class="ml-115 text-2xl">
+			<span id="HR"></span>
+		 </div> 
+		   <div class="tategaki"
+		　       style="height: 6rem;"
+				 id="担任">
+		   </div>
+			 
+		   <div class="tategaki"
+	　          style="height: 6rem;"
+	　          id="副担任">
+		   </div>
+		  
+		</div>
+
+	
+		
+		
+		
+
+	<form id="aaa"   action ="result.html" method="POST">
+		<input id="toPDF" type="submit" value="PDFにする"></input>
+	</form>
+
+	<div>
+		<div class="tategaki">
+				<div style="height: 30%;">
+					<p id="main"></p>
+				</div>
+		</div>
+		<div class="tategaki">
+			<div style="height: 10;">				
+				<p id="main_middle"></p>				
+			</div>
+	    </div>
+		
+	</div>
+    
+</body>
+
+<h2 style="background:rgb(245, 249, 253);  
+           height: 910px;"
+	id="formspace">
+	
+	 
+	
+		<fieldset form="aaa" id=field>
+	　　 <legend>入力欄</legend>
+		 <input name="hr" id="HR_area" placeholder="HR*" required ></input><br>
+		 <input name="te" id="teacher_area" placeholder="担任*" required ></input><br>
+		 <input name="subte" id="subteacher_area" placeholder="副担任*" required ></input><br>
+		 
+		 <textarea name="ma1" id="main_area1"cols="30" wrap="soft" maxlength="630/" placeholder="本文1"></textarea>
+		 <textarea name="ma2" id="main_area2"cols="30" wrap="soft" maxlength="750/"placeholder="本文2"></textarea>
+		 
+		 
+		</fieldset>
+	
+	
+</h2>
+<script>
+{"use strict";
+	{
+
+		const HR = document.querySelector("#HR");
+		const 担任 = document.querySelector("#担任");
+		const 副担任 = document.querySelector("#副担任");
+		
+		const main1 = document.querySelector("#main");
+		const main2 = document.querySelector("#main_middle");
+		
+
+		document.querySelector("#HR_area").addEventListener("input", (e) => {
+			HR.innerHTML = e.target.value;
+		});
+		
+		document.querySelector("#teacher_area").addEventListener("input", (e) => {
+			担任.innerHTML = e.target.value;
+		});
+		
+		document.querySelector("#subteacher_area").addEventListener("input", (e) => {
+			副担任.innerHTML = e.target.value;
+		});
+
+
+	
+
+		document.querySelector("#main_area1").addEventListener("input", (e) => {
+			main1.innerHTML = e.target.value;
+		});
+
+		document.querySelector("#main_area2").addEventListener("input", (e) => {
+			main2.innerHTML = e.target.value;
+		    console.log(e.target.value)
+		});
+	}
+
+	
+}
+</script>
+</html>
+© 2021 GitHub, Inc.shiratsumu
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
